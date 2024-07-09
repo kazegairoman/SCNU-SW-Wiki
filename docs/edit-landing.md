@@ -12,12 +12,11 @@
 
 1. 邮件提交
 
-发送邮件到 support@scnusw.online
+	发送邮件到 support@scnusw.online
 
 2. 代理提交
 
-提交规范编写的 Word 图文给管理员。
-管理员整理上传。
+	提交规范编写的 Word 图文给管理员，由管理员整理上传。
 
 <script>
 	function getQueryVariable(name, dft)
