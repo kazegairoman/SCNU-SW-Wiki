@@ -42,7 +42,7 @@ jobs:
       - name: Push
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.PAT_TOKEN }}
+          token: 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
           repository-name: Jerremiz/scnu-sw-online
           branch: main
           folder: site
