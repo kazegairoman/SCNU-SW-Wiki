@@ -14,9 +14,9 @@ nav:
 
 
 theme:
-  name: null
-  custom_dir: 'mkdocs-material/material'
-  # name: material
+  name: material
+  # custom_dir: 'mkdocs-material/material'
+  custom_dir: overrides
   language: 'zh'
   icon:
     repo: fontawesome/brands/git-alt
@@ -67,7 +67,7 @@ markdown_extensions:
   - meta
   - toc:
       permalink: ""
-      # slugify: !!python/name:pymdownx.slugs.uslugify
+      slugify: !!python/name:pymdownx.slugs.uslugify
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.caret
@@ -99,10 +99,8 @@ markdown_extensions:
 
 plugins:
   - search
-  # - git-revision-date-localized:
-  #     type: timeago
-  #     enable_creation_date: true
-
+  - tags:
+      enabled: true
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -110,12 +108,6 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - javascripts/analytics.js
 
-plugins: []
-
-hooks:
-  - hooks/on_env.py
-
-
 extra:
-  copyright: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a>'
+  # copyright: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a>'
   generator: false
