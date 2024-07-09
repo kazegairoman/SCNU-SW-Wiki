@@ -16,5 +16,5 @@ jobs:
           cd tmp
           git remote add upstream https://${{ secrets.PAT_TOKEN }}@github.com/SCNU-SW/SCNU-SW-Wiki.git
           git fetch upstream
-          git merge upstream/master
-          git push origin master
+          git merge upstream/main
+          git push origin main
