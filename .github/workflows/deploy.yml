@@ -38,23 +38,11 @@ jobs:
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
 
-  sync:
-    needs: deploy
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-
-      - name: Configure Git
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
       - name: Push
-        env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: |
-          git remote add target https://${{ secrets.PAT_TOKEN }}@github.com/Jerremiz/scnu-sw-online.git
-          git push target HEAD:main --force
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository-name: Jerremiz/scnu-sw-online
+          branch: main
+          folder: site
+          commit-message: "${{ github.event.head_commit.message }} Updated By Github Actions"
