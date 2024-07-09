@@ -11,6 +11,44 @@ nav:
     - 格式手册: intro/format.md
   - 学习:
     - 生涯规划: learning/career.md
+  - 工具软件:
+    - 工具软件简介: tools/index.md
+    - 代码编辑工具:
+      - Vim: tools/editor/vim.md
+      - Emacs: tools/editor/emacs.md
+      - VS Code: tools/editor/vscode.md
+      - Atom: tools/editor/atom.md
+      - Eclipse: tools/editor/eclipse.md
+      - Notepad++: tools/editor/npp.md
+      - Kate: tools/editor/kate.md
+      - Dev-C++: tools/editor/devcpp.md
+      - CLion: tools/editor/clion.md
+      - Geany: tools/editor/geany.md
+      - Xcode: tools/editor/xcode.md
+      - GUIDE: tools/editor/guide.md
+      - Sublime Text: tools/editor/sublime.md
+      - CP Editor: tools/editor/cpeditor.md
+    - 评测工具: 
+      - 评测工具简介: tools/judger/index.md
+      - Arbiter: tools/judger/arbiter.md
+      - Cena: tools/judger/cena.md
+      - CCR Plus: tools/judger/ccr-plus.md
+      - Lemon: tools/judger/lemon.md
+    - 命令行: tools/cmd.md
+    - 编译器: tools/compiler.md
+    - WSL (Windows 10): tools/wsl.md
+    - Special Judge: tools/special-judge.md
+    - Testlib:
+      - Testlib 简介: tools/testlib/index.md
+      - 通用: tools/testlib/general.md
+      - Generator: tools/testlib/generator.md
+      - Validator: tools/testlib/validator.md
+      - Interactor: tools/testlib/interactor.md
+      - Checker: tools/testlib/checker.md
+    - Polygon: tools/polygon.md
+    - OJ 工具: tools/oj-tool.md
+    - LaTeX 入门: tools/latex.md
+    - Git: tools/git.md
 
 
 theme:
@@ -104,10 +142,8 @@ plugins:
 
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - javascripts/analytics.js
+  # - javascripts/analytics.js
 
 
 extra:
