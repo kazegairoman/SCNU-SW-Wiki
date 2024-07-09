@@ -7,7 +7,7 @@ date: 2024/07/09
 
 ## 欢迎来到 **SCNU-SW Wiki !**
 
-主项目托管在 [vercel](https://vercel.com)
+<!-- 主项目托管在 [vercel](https://vercel.com) -->
 
 <script>
   // #758

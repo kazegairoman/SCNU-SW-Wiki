@@ -2,7 +2,7 @@ site_name: SCNU-SW Wiki
 copyright: Copyright © 2023-2024 SCNU-SW Wiki Team
 repo_url: https://github.com/SCNU-SW/SCNU-SW-Wiki
 repo_name: SCNU-SW/SCNU-SW-Wiki
-edit_uri: 'https://365369.xyz/edit-landing/?ref='
+edit_uri: https://365369.xyz/edit-landing/?ref=
 
 
 nav:
@@ -54,7 +54,7 @@ nav:
 theme:
   name: material
   custom_dir: overrides
-  language: 'zh'
+  language: zh
 
   icon:
     repo: fontawesome/brands/git-alt
@@ -91,8 +91,8 @@ theme:
     - content.action.edit
 
   font:
-    text: 'Fira Sans'
-    code: 'Fira Mono'
+    text: Fira Sans
+    code: Fira Mono
 
 
 extra_css:
@@ -147,7 +147,7 @@ extra_javascript:
 
 
 extra:
-  copyright: '<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>'
+  copyright: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a>
   generator: false
 
 
