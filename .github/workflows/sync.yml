@@ -1,0 +1,32 @@
+name: sync
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    
+    - name: Set up Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+    
+    - name: Add destination repository
+      run: git remote add destination https://github.com/Jeremiz/scnu-sw-online.git
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    
+    - name: Push
+      run: |
+        git push destination gh-pages:main --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
