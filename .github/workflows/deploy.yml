@@ -56,5 +56,5 @@ jobs:
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          git remote add target https://${{ secrets.PAT_TOKEN }}@github.com/<target_username>/<target_repo>.git
+          git remote add target https://${{ secrets.PAT_TOKEN }}@github.com/Jerremiz/scnu-sw-online.git
           git push target HEAD:main --force
