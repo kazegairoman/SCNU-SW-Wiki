@@ -17,12 +17,6 @@ jobs:
       with:
         ref: gh-pages
     
-    - name: Set up Git
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git remote set-url origin https://github.com/MyRepo/project.git
-    
     - name: Add destination repository
       run: git remote add destination https://github.com/Jerremiz/scnu-sw-online.git
       env:
