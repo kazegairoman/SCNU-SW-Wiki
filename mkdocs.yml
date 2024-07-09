@@ -2,7 +2,7 @@ site_name: SCNU-SW Wiki
 copyright: Copyright © 2023-2024 SCNU-SW Wiki Team
 repo_url: https://github.com/SCNU-SW/SCNU-SW-Wiki
 repo_name: SCNU-SW/SCNU-SW-Wiki
-edit_uri: 'https://365368.xyz/edit-landing/?ref='
+edit_uri: 'https://365369.xyz/edit-landing/?ref='
 
 
 nav:
@@ -97,11 +97,11 @@ markdown_extensions:
       alternate_style: true
 
 
-# plugins:
-#   - search
-#   - git-revision-date-localized:
-#       type: timeago
-#       enable_creation_date: true
+plugins:
+  - search
+  # - git-revision-date-localized:
+  #     type: timeago
+  #     enable_creation_date: true
 
 
 extra_javascript:
