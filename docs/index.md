@@ -1,7 +1,7 @@
 ---
 title: SCNU-SW Wiki
 author: zhy
-updated: 2024/07/09
+updated: 2024/07/10
 date: 2024/07/09
 ---
 
