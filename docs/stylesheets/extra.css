@@ -116,7 +116,7 @@ mjx-container>img {
     --md-footer-bg-color--dark: #272833;
 }
 
-[data-md-color-primary=white] {
+[data-md-color-scheme="default"] {
     --md-footer-bg-color: #2e303e;
     --md-footer-bg-color--dark: #2a2c38;
 }
@@ -134,8 +134,8 @@ mjx-container>img {
     max-width: 1440px;
 }
 
-.md-footer__inner {
+/* .md-footer__inner {
     justify-content: space-between;
     overflow: auto;
     padding: .01rem;
-}
+} */
