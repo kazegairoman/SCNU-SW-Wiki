@@ -34,7 +34,9 @@ jobs:
       - run: pip install mkdocs-material 
 
       # 部署静态文件
-      - name: Deploy to private repo
+      - name: Deploy
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
 
           git config --global credential.useHttpPath true
