@@ -19,6 +19,6 @@
 		}
 		return dft;
 	}
-	document.getElementById("btn-startedit").href = "https://github.com/Tweakerzhao/wiki/edit/main/docs" + getQueryVariable("ref", "");
+	document.getElementById("btn-startedit").href = "https://github.com/SCNU-SW/SCNU-SW-Wiki/edit/main/docs" + getQueryVariable("ref", "");
 </script>
 
