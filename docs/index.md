@@ -1,12 +1,11 @@
 ---
 title: SCNU-SW Wiki
-author: zhy
+author: <a href="https://jd.com">zhy</a>
 updated: 2024/07/09
 date: 2024/07/09
 ---
 
 ## 欢迎来到 **SCNU-SW Wiki !**
-
 
 
 <script>

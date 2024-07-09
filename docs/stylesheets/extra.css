@@ -134,8 +134,8 @@ mjx-container>img {
     max-width: 1440px;
 }
 
-/* .md-footer__inner {
+.md-footer__inner {
     justify-content: space-between;
     overflow: auto;
     padding: .01rem;
-} */
+}
