@@ -26,5 +26,3 @@ jobs:
     - name: Push
       run: |
         git push destination gh-pages:main --force
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
