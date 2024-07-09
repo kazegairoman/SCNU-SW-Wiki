@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: read|write
+  contents: write
 
 jobs:
   deploy:
@@ -36,7 +36,7 @@ jobs:
 
       # 安装 mkdocs-material
       - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+      # - run: mkdocs gh-deploy --force
       - run: mkdocs build
 
       - name: Push
