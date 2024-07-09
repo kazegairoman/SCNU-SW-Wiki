@@ -37,3 +37,12 @@ jobs:
       # 安装 mkdocs-material
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
+      - run: mkdocs build
+
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: git@github.com:Jerremiz/scnu-sw-online.git
+          BRANCH: gh-pages
+          FOLDER: site
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
