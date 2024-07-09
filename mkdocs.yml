@@ -38,8 +38,8 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  logo: assets/scnu.png
+  favicon: assets/scnu.png
 
   features:
     - navigation.tabs
