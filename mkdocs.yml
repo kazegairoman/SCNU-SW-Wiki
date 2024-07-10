@@ -8,7 +8,6 @@ edit_uri: https://365369.xyz/edit-landing/?ref=
 nav:
   - 简介:
     - Getting Started: index.md
-    - 格式手册: intro/format.md
   - 学习:
     - 生涯规划: learning/career.md
   - 工具软件:

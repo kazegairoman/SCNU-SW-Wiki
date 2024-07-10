@@ -42,7 +42,7 @@ jobs:
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
-          REPO: git@github.com:Jerremiz/scnu-sw-online.git
+          REPO: ${{ secrets.DEPLOY_PRIVATE_SSH }}
           BRANCH: main
           FOLDER: site
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
