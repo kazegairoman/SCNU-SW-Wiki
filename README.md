@@ -1,1 +1,1 @@
-# SCNU-SW Wiki
+# 华师手册
