@@ -1,11 +1,11 @@
 ---
 title: 华师手册
 author: zhy
-updated: 2024/07/10
+updated: 2024/07/11
 date: 2024/07/09
 ---
 
-## 欢迎来到 **华师手册 !**
+## 欢迎来到 **华师手册**
 
 <!-- 主项目托管在 [vercel](https://vercel.com) -->
 
