@@ -6,7 +6,7 @@ date: 2024/07/09
 
 在文章开始之前，**华师手册** 项目组全体成员十分欢迎您为本项目贡献页面。正因为有了上百位像您一样的人，才有了 **华师手册** 的今天！
 
-本页面将列出在 **华师手册** 编写过程时推荐使用的格式规范与编辑方针。建议在撰稿或者修正 Wiki 页面以前阅读，以帮助您完成更高质量的内容，内容有点长，比较熟悉 markdown 的同学可以先粗略看看。
+本页面将列出在 **华师手册** 编写过程时推荐使用的格式规范与编辑方针。建议在撰稿或者修正 Wiki 页面以前阅读，以帮助您完成更高质量的内容.
 
 如果您已迫不及待，想要快速上手，建议先阅读图片举例的章节。
 
@@ -14,8 +14,8 @@ date: 2024/07/09
 
 ==当你打算贡献某部分的内容时，你应该尽量熟悉以下两部分：==
 
--   文档、图片存储的格式
--   正文 markdown 和 $\rm{\LaTeX}$ 公式的格式要求
+-   ==文档、图片存储的格式（必看）==
+-   正文 markdown 和 $\rm{\LaTeX}$ 公式的格式要求（选看）
 
 ### 文档图片存储的格式
 
@@ -23,7 +23,7 @@ date: 2024/07/09
 
 -   ==请务必确保文档中引用的 **外链** 图片已经全部转存到了 **本库内** (大类分类文件夹中) 对应的 `images` 文件夹中（防止触发某些网站的防盗链），建议处理成 `MD 文档名称 + 编号` 的形式（可参考已有文档中图片的处理方式）。例如：本篇文档的文件名称为 format，则文档中引用的第一张图片的名字为 `format1.png`。==
 
--   推荐使用 SVG 格式的图片[^ref4]，以获取较好的清晰度和缩放效果。
+-   推荐使用 SVG 格式的图片[^ref3]，以获取较好的清晰度和缩放效果。
 
 -   ==推荐使用 [图片处理工具](https://imagestool.com/zh_CN/) 对图片格式进行转换，推荐PNG格式，若图片过大可进行压缩。==
 
@@ -33,7 +33,7 @@ date: 2024/07/09
 
 -   请确保您的文档中的引用链接的稳定性。**不推荐** 引用 **自建** 服务中的资源。建议在添加时同时将该外链存于互联网档案馆[^webarchive]，以防无法替代的链接失效。
 
--   站内链接请去掉网站域名，并且使用相对路径链接对应 `.md` 文件。例如，在本页面（`intro/format`）中链接杂项简介（`misc`），应使用 `[杂项简介](../misc/index.md)`。可以在链接中添加 hash 来链接到某一节，例如 [`[Pull Request 信息格式规范](./htc.md#pull-request-信息格式规范)`](./htc.md#pull-request-信息格式规范)，hash 的值可以通过位于每个标题右侧的按钮或者位于网页右侧的目录中的链接得到。
+-   站内链接请去掉网站域名，并且使用相对路径链接对应 `.md` 文件。例如，在本页面（`intro/format`）中链接杂项简介（`misc`），应使用 `[杂项简介](../misc/index.md)`。可以在链接中添加 hash 来链接到某一节，例如 [`[在 GitHub 上编辑](./htc.md#在-GitHub-上编辑)`](./htc.md#在-GitHub-上编辑)，hash 的值可以通过位于每个标题右侧的按钮或者位于网页右侧的目录中的链接得到。
 
 ### 文档的基本格式要求
 
@@ -197,9 +197,9 @@ date: 2024/07/09
     `前置知识：[站内页面1](url1)、[站内页面2](url2)和[站内页面3](url3)`
 
     ???+ success "示例"
-        前置知识：[时间复杂度](../basic/complexity.md)
+        前置知识：[Git](../study/dse/git.md)
         
-        本页面将介绍基础的计算理论的知识。
+        本页面将介绍Git的知识。
 
 -   请注意文档结构。文档结构应当十分条理，层次清晰。请不要让诸如「五级标题」这种事情再次发生了，一篇正常的文章是用不到如此复杂的结构层次的。
 
@@ -231,7 +231,7 @@ date: 2024/07/09
     -   数列的第一项。
     -   输入文件的第一行。
 
--   请尽量避免在标题中使用 MathJax 公式，无论是几级标题。在标题中使用公式有可能会导致目录显示错误。[^ref3]
+-   请尽量避免在标题中使用 MathJax 公式，无论是几级标题。在标题中使用公式有可能会导致目录显示错误。
 
 -   请注意代码的可读性。
     -   代码应拥有清晰的逻辑。
@@ -240,163 +240,19 @@ date: 2024/07/09
 
 #### LaTeX 公式的格式要求
 
-LaTeX 作为公式排版的首选，我们应当正确地使用它。因此对于 LaTeX 的使用我们有严格的要求。如果您想要快速上手，可以阅读本章节末给出的表格。
-
--   您使用的符号不应与 [数学符号表](./symbol.md) 规定的符号冲突。
-
--   使用 Roman 体表示数字、常量、算子和函数。使用 Italic 体表示变量、下标。LaTeX 已经预先定义好了一些常见的常量、函数、运算符等，我们可以直接调用，包括但不限于：
-
-    ```latex
-    \log, \ln, \lg, \sin, \cos, \tan, \sec, \csc, \cot, \gcd, \min, \max, \exp, \inf, \mod, \bmod, \pmod
-    ```
-
-    所以在输入常量、函数名、运算符等时，请先检查一下是否应该使用 Roman 体或其它字体。LaTeX 符号的书写可参考 [KaTeX 的 Supported Functions 页面](https://katex.org/docs/supported.html)（不是全部），也可以搜索求解。
-
-    由于 LaTeX 书写 Roman 体小写希腊字母较为困难，故小写希腊字母常量、算子和函数可以使用 Italic 体，如 $\pi$ 以及 $\delta x$ 中的 $\delta$.
-
-    如果遇到没有预先定义好的需要使用 Roman 体的 **函数名**，我们可以使用 `$\operatorname{something}$` 来产生，如我们可以使用 `$\operatorname{lcm}$` 产生正体的最小公倍数（函数）符号。同理，产生 Roman 体的 **常量** 应用 `$\mathrm{}$`；产生 Roman 体粗体符号应用 `$\mathbf{}$`；产生 Italic 体粗体符号应用 `$\boldsymbol{}$`（如向量 $\boldsymbol{a}$）。对于多字母的变量，应当使用 `$\textit{}$`。其他非数学内容，包括英文、特殊符号等，一律使用 `$\text{}$`。中文我们则建议不放在 LaTeX 公式中。
-
--   如果表达式须折行（常见于较长的行间公式中），则应遵循如下换行规则：
-
-    -   将换行符放在 $=$，$+$，$-$，$\pm$，$\mp$ 之前，如果有必要，也可放在 $\times$，$\cdot$，$/$ 之前，如：
-
-        $$
-        \begin{aligned}
-            \mathrm{e}^x &= \sum\limits_{n=0}^{\infty} \frac{x^n}{n!} \\
-            &= \phantom{+} 1 + x + \frac{x^2}{2} \\
-            & \phantom{=} + \frac{x^3}{6} + \frac{x^4}{24} + \dots \\
-        \end{aligned}
-        $$
-
-    -   同一运算符不应在换行符前后同时出现，
-
-    -   换行符尽量不要出现在括号内的表达式中。
-
--   在行内使用分数的时候，请使用 `$\dfrac{}{}$`。比如 `$\dfrac{1}{2}$`，效果 $\dfrac{1}{2}$，而不是 `$\frac{1}{2}$`，效果 $\frac{1}{2}$。
-
--   组合数请使用 `\dbinom{n}{m}`，效果 $\dbinom{n}{m}$，而不是 `{n \choose m}`（在 LaTeX 中这种写法已不推荐）；与上一条关于分数的约定相似，请不要使用 `\binom{n}{m}`，效果 $\binom{n}{m}$。
-
--   尽可能避免在行内使用巨运算符（如 $\sum$，$\prod$，$\int$ 等）。
-
--   在不会引起歧义的情况下，请用 `$\times$` 代替星号，叉乘请使用 `$\times$`，点乘请使用 `$\cdot$`。如 $a\times b$，$a\cdot b$，而不是 $a\ast b$。
-
--   请用 `$\cdots$`（居于排版基线与顶线中间），`$\ldots$`（居于排版基线的位置），`$\vdots$`（竖着的省略号）代替 `$...$`。如 $a_1,a_2,\cdots a_n$，而不是 $a_1,a_2,... a_n$。
-
--   请注意，不要在非代码区域使用任何程序设计语言的表示方式，而是使用 LaTeX 公式。例如，使用 `$=$` 而不是 `$==$`（如 $a=b$，而不是 $a==b$）、使用 `` `a<<1` `` 或者 `$a\times 2$` 而不是 `$a<<1$`、使用 `$a\bmod b$` 代替 `$a\%b$`（如 $a\bmod b$，而不是 $a\%b$）等。
-
--   公式中不要使用中括号连缀（即 C++ 高维数组的表示方式）而多使用下标。即 $a_{i,j,k}$ 而不是 $a[i][j][k]$。在公式中下标较复杂的情况下建议改用多元函数（$f(i,j,k)$）或内联代码格式。对于一元简单函数使用 `$f_i$`、`$f(i)$` 或 `$f[i]$` 均可。
-
--   为了统一且书写方便，复杂度分析时大 $O$ 记号请直接使用 `$O()$` 而不是 `$\mathcal O()$`。
-
--   在表示等价关系时，请使用 `$\iff$`，效果 $\iff$，而不是 `$\Leftrightarrow$`，效果 $\Leftrightarrow$。
-
--   分段函数环境 `cases`  **只能有两列**（即一个 `&` 分隔符）。
-
--   请不要滥用 LaTeX 公式。这不仅会造成页面加载缓慢（因为 MathJax 的效率低是出了名的），同时也会导致页面的排版混乱。我们通常使用 LaTeX 公式字体表示变量名称。我们的建议是，如非必要，尽量减少公式与普通正文字体的 **大量** 混合使用，如非必要，尽量不要使用公式，如：
-
-    ```LaTeX
-    我们将要学习 $Network-flow$ 中的 $SPFA$ 最小费用流，需要使用 $Edmonds–Karp$ 算法进行增广。
-    ```
-
-    就是一个典型的 **滥用公式字体** 的例子。（在页面中使用斜体请用 `*文本*` 表示。）
-
--   请正确使用对应的 LaTeX 符号，尤其是公式中的希腊字母等特殊符号。如欧拉函数请使用 `$\varphi$`，圆的直径请使用 `$\Phi$`，黄金分割请使用 `$\phi$`。这些符号虽然同样表示希腊字母 Phi，但是在不同的环境下有不同的含义。切记 **不要使用输入法的插入特殊符号** 来插入这种符号。
-
-    另外，由于 LaTeX 历史原因，空集的符号应为 `$\varnothing$` 而不是 `$\emptyset$`；其他的符号应参照 [数学符号表](./symbol.md) 书写。
-
-我们可以使用一个表格来总结一下上述内容。注意本表格没有举出所有符号的用法，只给出常见的错误。类似的情况类比即可。
-
-| 不符合规定的用法                     | 渲染效果           | 符合规定的用法                           | 渲染效果                               |
-| ------------------------------------ | ------------------ | ---------------------------------------- | -------------------------------------- |
-| `$log, ln, lg$`                      | $log, ln, lg$      | `$\log$, $\ln$, $\lg$`                   | $\log$，$\ln$，$\lg$                   |
-| `$sin, cos, tan$`                    | $sin, cos, tan$    | `$\sin$, $\cos$, $\tan$`                 | $\sin$，$\cos$，$\tan$                 |
-| `$gcd, lcm$`                         | $gcd, lcm$         | `$\gcd$, $\operatorname{lcm}$`           | $\gcd$，$\operatorname{lcm}$           |
-| `$e$, $\text{e}$, e`（自然对数的底） | $e$，$\text{e}$, e | `$\mathrm{e}$`                           | $\mathrm{e}$                           |
-| `$i$, $\text{i}$, i`（虚数单位）     | $i$，$\text{i}$, i | `$\mathrm{i}$`                           | $\mathrm{i}$                           |
-| `$ 小于 a 的质数 $`                  | $小于 a 的质数$    | `小于 $a$ 的质数`                        | 小于 $a$ 的质数                        |
-| `$...$`                              | $...$              | `$\cdots$, $\ldots$, $\vdots$, $\ddots$` | $\cdots$，$\ldots$，$\vdots$，$\ddots$ |
-| `$a*b$`（两个数相乘）                | $a*b$              | `$a\times b$, $a\cdot b$`                | $a\times b$，$a\cdot b$                |
-| `$SPFA$`（英文名称）                 | $SPFA$             | `SPFA`                                   | SPFA                                   |
-| `$a==b$`                             | $a==b$             | `$a=b$`                                  | $a=b$                                  |
-| `$f[i][j][k]$`                       | $f[i][j][k]$       | `$f_{i,j,k}$, $f(i,j,k)$`                | $f_{i,j,k}$，$f(i,j,k)$                |
-| `$R,N^*$`（集合）                    | $R,N^*$            | `$\mathbf{R}$, $\mathbf{N}^*$`           | $\mathbf{R}$，$\mathbf{N}^*$           |
-| `$\emptyset$`                        | $\emptyset$        | `$\varnothing$`                          | $\varnothing$                          |
-| `$size$`                             | $size$             | `$\textit{size}$`                        | $\textit{size}$                        |
+可参考： [OI-Wiki](https://oi-wiki.org/intro/format/#latex-%E5%85%AC%E5%BC%8F%E7%9A%84%E6%A0%BC%E5%BC%8F%E8%A6%81%E6%B1%82)
 
 #### 对数学公式的附加格式要求
 
-请注意，尽管上述输入公式的语法和真正的 LaTeX 排版系统非常相似，但 **MathJax 和 LaTeX 是两个完全没有关系的东西**，MathJax 仅仅使用了一部分与 LaTeX 非常相似的语法而已。实际上，二者之间有不少细节差别，而这些差别经常导致写出来的公式在二者之间不通用。
-
-由于 **华师手册** 使用 LaTeX 排版引擎开发了 PDF 导出工具，因此有必要强调公式在 MathJax 和 LaTeX 之间的兼容性。**请各位在 Wiki 中书写数学公式时注意以下几点。**
-
-这些规则已经向 MathJax 做了尽可能多的妥协。导出工具兼容了一部分原本仅能在 MathJax 中正常输出的写法。
-
--   请使用 `\begin{aligned} ... \end{aligned}` 表示多行对齐的公式；
-
--   如果这些多行对齐的公式需要 **编号**，请用 `align` 或 `equation` 环境；
-
--   不要使用 `split`、`eqnarray` 环境；
-
--   不要使用 `\lt`,`\gt` 来表示大于号和小于号，请直接使用 `<`，`>`；
-
--   不要直接用 `\\` 换行（需要换行的公式，请套在 `aligned` 或其他多行环境下）；
-
--   若要输出 LaTeX 符号 $\rm{\LaTeX}$，请用 `$\rm{\LaTeX}$`，而不是 `mathrm`；（`\LaTeX` 在 TeX 排版系统中是一个不能用于数学模式下的命令，而 `\mathrm` 又不能在普通模式下使用；另外，`\text` 命令虽然在 TeX 上正常输出，但是在 MathJax 中 `\text` 命令的参数会被原样输出，而不是按命令转义）；
-
--   数学公式中的中文文字 **必须置于 `\text{}` 命令之中**，而变量、数字、运算符、函数名称则必须置于 `\text{}` 命令之外。**请不要在 `\text{}` 命令中嵌套数学公式**；
-
--   使用 `array` 环境时请注意 **实际列数与对齐符号的数量保持一致**。例如下面的公式中，数据实际有 3 列（`&` 是列分隔符），因此需要 3 个对齐符号（`l`/`r`/`c` 分别表示左、右、居中对齐）。
-
-    ```latex
-    $$
-    \begin{array}{lll}
-    F_1=\{\frac{0}{1},&&\frac{1}{1}\}\\
-    F_2=\{\frac{0}{1},&\frac{1}{2},&\frac{1}{1}\}\\
-    \end{array}
-    $$
-    ```
+可参考： [OI-Wiki](https://oi-wiki.org/intro/format/#%E5%AF%B9%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E9%99%84%E5%8A%A0%E6%A0%BC%E5%BC%8F%E8%A6%81%E6%B1%82)
 
 #### 伪代码格式
 
-伪码具体格式没有严格要求，请参考算法导论或学术论文。注意不要写成 Python。
+可参考： [OI-Wiki](https://oi-wiki.org/intro/format/#%E4%BC%AA%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F)
 
-Wiki 内使用 LaTeX 书写伪码，整体处于 array 环境中，缩进使用 `$\qquad$`，文字描述使用 `$\text$`，关键字使用 `$\textbf$`，赋值使用 `$\gets$`。
+#### 数学符号
 
-参考示例：
-
-$$
-\begin{array}{ll}
-1 &  \textbf{Input. } \text{The edges of the graph } e , \text{ where each element in } e \text{ is } (u, v, w) \\
-  &  \text{ denoting that there is an edge between } u \text{ and } v \text{ weighted } w . \\
-2 &  \textbf{Output. } \text{The edges of the MST of the input graph}.\\
-3 &  \textbf{Method. } \\ 
-4 &  result \gets \varnothing \\
-5 &  \text{sort } e \text{ into nondecreasing order by weight } w \\ 
-6 &  \textbf{for} \text{ each } (u, v, w) \text{ in the sorted } e \\ 
-7 &  \qquad \textbf{if } u \text{ and } v \text{ are not connected in the union-find set } \\
-8 &  \qquad\qquad \text{connect } u \text{ and } v \text{ in the union-find set} \\
-9 &  \qquad\qquad  result \gets result\;\bigcup\ \{(u, v, w)\} \\
-10 &  \textbf{return }  result
-\end{array}
-$$
-
-```latex
-$$
-\begin{array}{ll}
-1 &  \textbf{Input. } \text{The edges of the graph } e , \text{ where each element in } e \text{ is } (u, v, w) \\
-  &  \text{ denoting that there is an edge between } u \text{ and } v \text{ weighted } w . \\
-2 &  \textbf{Output. } \text{The edges of the MST of the input graph}.\\
-3 &  \textbf{Method. } \\
-4 &  result \gets \varnothing \\
-5 &  \text{sort } e \text{ into nondecreasing order by weight } w \\
-6 &  \textbf{for} \text{ each } (u, v, w) \text{ in the sorted } e \\
-7 &  \qquad \textbf{if } u \text{ and } v \text{ are not connected in the union-find set } \\
-8 &  \qquad\qquad \text{connect } u \text{ and } v \text{ in the union-find set} \\
-9 &  \qquad\qquad  result \gets result\;\bigcup\ \{(u, v, w)\} \\
-10 &  \textbf{return }  result
-\end{array}
-$$
-```
+可参考： [OI-Wiki](https://oi-wiki.org/intro/symbol/)
 
 #### 代码块的格式要求
 
@@ -495,9 +351,7 @@ $$
 
 [^ref2]: [CCF 关于恢复 NOIP 竞赛的公告 - 中国计算机学会](https://www.ccf.org.cn/c/2020-01-21/694716.shtml)
 
-[^ref3]: [我的公式为什么在目录里没有正常显示？好像双倍了](faq.md)
-
-[^ref4]: [SVG|MDN](https://developer.mozilla.org/zh-CN/docs/Web/SVG)
+[^ref3]: [SVG|MDN](https://developer.mozilla.org/zh-CN/docs/Web/SVG)
 
 [^webarchive]: [Save Page in Internet Archive](https://web.archive.org/save/)
 

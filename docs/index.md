@@ -1,6 +1,6 @@
 ---
-title: 华师手册
-author: zhy
+title: Getting Started
+author: 
 updated: 2024/07/11
 date: 2024/07/09
 ---

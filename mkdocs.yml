@@ -8,46 +8,32 @@ edit_uri: https://365369.xyz/edit-landing/?ref=
 nav:
   - 简介:
     - Getting Started: index.md
-  - 学习:
-    - 生涯规划: learning/career.md
-  - 工具软件:
-    - 工具软件简介: tools/index.md
-    - 代码编辑工具:
-      - Vim: tools/editor/vim.md
-      - Emacs: tools/editor/emacs.md
-      - VS Code: tools/editor/vscode.md
-      - Atom: tools/editor/atom.md
-      - Eclipse: tools/editor/eclipse.md
-      - Notepad++: tools/editor/npp.md
-      - Kate: tools/editor/kate.md
-      - Dev-C++: tools/editor/devcpp.md
-      - CLion: tools/editor/clion.md
-      - Geany: tools/editor/geany.md
-      - Xcode: tools/editor/xcode.md
-      - GUIDE: tools/editor/guide.md
-      - Sublime Text: tools/editor/sublime.md
-      - CP Editor: tools/editor/cpeditor.md
-    - 评测工具: 
-      - 评测工具简介: tools/judger/index.md
-      - Arbiter: tools/judger/arbiter.md
-      - Cena: tools/judger/cena.md
-      - CCR Plus: tools/judger/ccr-plus.md
-      - Lemon: tools/judger/lemon.md
-    - 命令行: tools/cmd.md
-    - 编译器: tools/compiler.md
-    - WSL (Windows 10): tools/wsl.md
-    - Special Judge: tools/special-judge.md
-    - Testlib:
-      - Testlib 简介: tools/testlib/index.md
-      - 通用: tools/testlib/general.md
-      - Generator: tools/testlib/generator.md
-      - Validator: tools/testlib/validator.md
-      - Interactor: tools/testlib/interactor.md
-      - Checker: tools/testlib/checker.md
-    - Polygon: tools/polygon.md
-    - OJ 工具: tools/oj-tool.md
-    - LaTeX 入门: tools/latex.md
-    - Git: tools/git.md
+    - 如何参与: intro/htc.md
+  - 黄页:
+    - 黄页简介: contact/index.md
+  - 学在华师:
+    - 学在华师简介: study/index.md
+    # - 行知书院:
+    - 数据科学与工程学院:
+      - 生涯规划: 
+        - 保研篇: study/dse/pgrec.md
+        - 考研篇: study/dse/pgexam.md
+      - 工具软件:
+        - LaTeX 入门: study/dse/latex.md
+        - Git: study/dse/git.md
+    # - 材料与新能源学院:
+    # - 职业教育学院:
+    # - 基础教育学院:
+    # - 商学院:
+    # - 创意设计学院:
+  - 生活在华师:
+    - 生活在华师简介: life/index.md
+  - 社团活动:
+    - 社团活动简介: organizations/index.md
+  - 周边:
+    - 周边简介: surroundings/index.md
+
+
 
 
 theme:
@@ -81,6 +67,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.instant
+    - navigation.instant.progress
     - navigation.top
     - navigation.footer
     - navigation.tracking
